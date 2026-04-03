@@ -28,7 +28,10 @@ COPY main.py ./
 COPY scripts ./scripts
 
 RUN mkdir -p /app/data /app/data/tmp /app/logs \
-    && chmod +x /app/scripts/entrypoint.sh
+    && apt-get update && apt-get install -y --no-install-recommends dos2unix \
+    && dos2unix /app/scripts/*.sh \
+    && apt-get purge -y dos2unix && apt-get autoremove -y && rm -rf /var/lib/apt/lists/* \
+    && chmod +x /app/scripts/entrypoint.sh /app/scripts/init_storage.sh
 
 EXPOSE 8000
 
