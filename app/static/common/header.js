@@ -1,0 +1,50 @@
+async function loadAdminHeader() {
+  const container = document.getElementById('app-header');
+  if (!container) return;
+  try {
+    const res = await fetch('/static/common/header.html?v=5');
+    if (!res.ok) return;
+    container.innerHTML = await res.text();
+
+    // 检测站点模式
+    const siteMode = (typeof window.__SITE_MODE__ === 'string') ? window.__SITE_MODE__ : 'private';
+    const isPublic = siteMode === 'public';
+
+    // 根据模式显隐元素
+    container.querySelectorAll('.nav-admin-only').forEach(el => {
+      el.style.display = isPublic ? 'none' : '';
+    });
+    container.querySelectorAll('.nav-public-only').forEach(el => {
+      el.style.display = isPublic ? '' : 'none';
+    });
+
+    // 高亮当前导航
+    const path = window.location.pathname;
+    const links = container.querySelectorAll('a[data-nav]');
+    links.forEach((link) => {
+      const target = link.getAttribute('data-nav') || '';
+      if (target && path.startsWith(target)) {
+        link.classList.add('active');
+        const group = link.closest('.nav-group');
+        if (group) {
+          const trigger = group.querySelector('.nav-group-trigger');
+          if (trigger) {
+            trigger.classList.add('active');
+          }
+        }
+      }
+    });
+
+    if (!isPublic && typeof updateStorageModeButton === 'function') {
+      updateStorageModeButton();
+    }
+  } catch (e) {
+    // Fail silently to avoid breaking page load
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', loadAdminHeader);
+} else {
+  loadAdminHeader();
+}

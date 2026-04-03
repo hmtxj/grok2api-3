@@ -1,0 +1,102 @@
+[
+    {
+        "cn": "仰拍",
+        "en": "from below"
+    },
+    {
+        "cn": "俯拍",
+        "en": "from above"
+    },
+    {
+        "cn": "荷兰角（倾斜）",
+        "en": "dutch angle"
+    },
+    {
+        "cn": "特写",
+        "en": "close up"
+    },
+    {
+        "cn": "极致特写",
+        "en": "extreme close up"
+    },
+    {
+        "cn": "远景",
+        "en": "wide shot"
+    },
+    {
+        "cn": "中景",
+        "en": "medium shot"
+    },
+    {
+        "cn": "全身照",
+        "en": "full body shot"
+    },
+    {
+        "cn": "鸟瞰",
+        "en": "bird's eye view"
+    },
+    {
+        "cn": "虫视角",
+        "en": "worm's eye view"
+    },
+    {
+        "cn": "过肩镜头",
+        "en": "over the shoulder"
+    },
+    {
+        "cn": "侧面",
+        "en": "profile view"
+    },
+    {
+        "cn": "四分之三侧面",
+        "en": "three quarter view"
+    },
+    {
+        "cn": "正面",
+        "en": "front view"
+    },
+    {
+        "cn": "背面",
+        "en": "back view"
+    },
+    {
+        "cn": "低角度",
+        "en": "low angle"
+    },
+    {
+        "cn": "高角度",
+        "en": "high angle"
+    },
+    {
+        "cn": "平视",
+        "en": "eye level"
+    },
+    {
+        "cn": "鱼眼镜头",
+        "en": "fisheye lens"
+    },
+    {
+        "cn": "微距",
+        "en": "macro shot"
+    },
+    {
+        "cn": "景深",
+        "en": "depth of field"
+    },
+    {
+        "cn": "背景虚化",
+        "en": "bokeh background"
+    },
+    {
+        "cn": "电影角度",
+        "en": "cinematic angle"
+    },
+    {
+        "cn": "全景",
+        "en": "panoramic view"
+    },
+    {
+        "cn": "倾斜画面",
+        "en": "tilted frame"
+    }
+]
