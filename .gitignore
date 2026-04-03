@@ -60,3 +60,20 @@ htmlcov/
 # Project specific
 config.local.toml
 config.toml
+
+# 绝对死守屏蔽：本地启动/测试脚本
+*.bat
+*.cmd
+*.sh
+!scripts/*.sh
+
+# 绝对死守屏蔽：本地调试日志与记录
+*.txt
+!requirements.txt
+!readme.txt
+GEMINI.md
+
+# 绝对死守屏蔽：私密数据与数据库
+data/
+*.db
+*.sqlite3
