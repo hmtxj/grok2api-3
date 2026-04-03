@@ -73,7 +73,11 @@ config.toml
 !readme.txt
 GEMINI.md
 
-# 绝对死守屏蔽：私密数据与数据库
+# Absolute block: private data and databases
 data/
 *.db
 *.sqlite3
+
+# Absolute block: test code and temp files
+tests/
+*.tmp
